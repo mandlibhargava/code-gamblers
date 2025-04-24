@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About EcoSphere - Our Mission for a Sustainable Future</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/animations.css">
+</head>
+<body class="forest-bg">
+    <!-- Leaf Animation Container -->
+    <div id="leaf-container"></div>
+    
+    <!-- Navigation (consistent across all pages) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-forest">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="jagan12.jpg" alt="EcoSphere" height="80">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3 active" href="../about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle rounded-pill px-3" href="#" id="activitiesDropdown" role="button" data-bs-toggle="dropdown">
+                            Activities
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="../activities/index.html">All Activities</a></li>
+                            <li><a class="dropdown-item" href="../activities/challenges.html">Challenges</a></li>
+                            <li><a class="dropdown-item" href="../activities/quizzes.html">Quizzes</a></li>
+                            <li><a class="dropdown-item" href="../activities/virtual-planting.html">Virtual Planting</a></li>
+                            <li><a class="dropdown-item" href="../activities/rewards.html">Rewards</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3" href="../report/index.html">Report Issues</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3" href="../community/index.html">Community</a>
+                    </li>
+                </ul>
+                <a href="../community/dashboard.html" class="btn btn-success ms-lg-3 rounded-pill px-4">My Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold mb-4">Our <span class="text-success">Mission</span> for a Greener Future</h1>
+                    <p class="lead mb-4">EcoSphere was founded on the belief that collective action can create meaningful environmental change.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="jagan13.jpg" alt="Team planting trees" class="img-fluid rounded-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story py-5 bg-light-green">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 order-lg-2">
+                    <img src="jagan14.webp" alt="Earth in hands" class="img-fluid rounded-4 mb-4 mb-lg-0">
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h2 class="mb-4">Our Story</h2>
+                    <p>Founded in 2020 by a group of environmental scientists and tech enthusiasts, EcoSphere began as a small community project aimed at connecting people with nature through technology.</p>
+                    <p>What started as a simple tree-planting tracker has grown into a global platform with thousands of members working together to reduce pollution, protect ecosystems, and promote sustainable living.</p>
+                    <p>Today, we partner with environmental organizations, schools, and businesses to amplify our impact and create real change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Meet Our Team</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="team-card p-4 rounded-4 text-center">
+                        <img src="../images/team1.jpg" alt="Team member" class="rounded-circle mb-3" width="150" height="150">
+                        <h4>Dr. Sarah Green</h4>
+                        <p class="text-muted">Founder & CEO</p>
+                        <p>Environmental scientist with 15 years of experience in sustainability research.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card p-4 rounded-4 text-center">
+                        <img src="../images/team2.jpg" alt="Team member" class="rounded-circle mb-3" width="150" height="150">
+                        <h4>Alex Rivera</h4>
+                        <p class="text-muted">CTO</p>
+                        <p>Tech innovator focused on building platforms for social and environmental impact.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card p-4 rounded-4 text-center">
+                        <img src="../images/team3.jpg" alt="Team member" class="rounded-circle mb-3" width="150" height="150">
+                        <h4>Priya Patel</h4>
+                        <p class="text-muted">Community Director</p>
+                        <p>Expert in community engagement and environmental education.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section py-5 bg-dark-green text-white">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Partners</h2>
+            <div class="row align-items-center justify-content-center g-4">
+                <div class="col-6 col-md-3">
+                    <img src="../images/partner1.png" alt="Partner logo" class="img-fluid grayscale">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="../images/partner2.png" alt="Partner logo" class="img-fluid grayscale">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="../images/partner3.png" alt="Partner logo" class="img-fluid grayscale">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="../images/partner4.png" alt="Partner logo" class="img-fluid grayscale">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (consistent across all pages) -->
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+        <!-- Same footer as homepage -->
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../js/main.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

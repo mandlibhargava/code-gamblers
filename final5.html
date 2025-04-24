@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco Quizzes | EcoSphere Activities</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="final1.css">
+</head>
+<body class="forest-bg">
+    <!-- Leaf Animation Container -->
+    <div id="leaf-container"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-forest">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html">
+                <img src="../../images/logo.png" alt="EcoSphere" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3" href="../../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3" href="../../about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle rounded-pill px-3 active" href="#" id="activitiesDropdown" role="button" data-bs-toggle="dropdown">
+                            Activities
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="../index.html">All Activities</a></li>
+                            <li><a class="dropdown-item" href="../challenges.html">Challenges</a></li>
+                            <li><a class="dropdown-item active" href="../quizzes.html
+                                ">Quizzes</a></li>
+                            <li><a class="dropdown-item" href="../virtual-planting.html">Virtual Planting</a></li>
+                            <li><a class="dropdown-item" href="../rewards.html">Rewards</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3" href="../../report/index.html">Report Issues</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3" href="../../community/index.html">Community</a>
+                    </li>
+                </ul>
+                <a href="../../community/dashboard.html" class="btn btn-success ms-lg-3 rounded-pill px-4">My Dashboard</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Quizzes Hero Section -->
+    <section class="quizzes-hero py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-3 fw-bold mb-4">Test Your <span class="text-success">Eco-Knowledge</span></h1>
+                    <p class="lead mb-4">Learn while having fun with our interactive environmental quizzes. Earn EcoPoints and badges for your achievements!</p>
+                    <div class="d-flex gap-3">
+                        <a href="#quiz-categories" class="btn btn-success btn-lg rounded-pill px-4">Explore Quizzes</a>
+                        <a href="../../community/dashboard.html" class="btn btn-outline-success btn-lg rounded-pill px-4">My Progress</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="../../images/quizzes-hero.png" alt="Person taking quiz" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Categories -->
+    <section id="quiz-categories" class="quiz-categories py-5 bg-light-green">
+        <div class="container">
+            <h2 class="text-center mb-5">Quiz Categories</h2>
+            
+            <div class="row g-4">
+                <!-- Category 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card p-4 rounded-4 text-center h-100">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h4>Forests & Wildlife</h4>
+                        <p>Test your knowledge about ecosystems and biodiversity</p>
+                        <a href="#forest-quizzes" class="btn btn-sm btn-outline-success mt-2">View Quizzes</a>
+                    </div>
+                </div>
+                
+                <!-- Category 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card p-4 rounded-4 text-center h-100">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h4>Recycling</h4>
+                        <p>How well do you know waste management and recycling?</p>
+                        <a href="#recycling-quizzes" class="btn btn-sm btn-outline-success mt-2">View Quizzes</a>
+                    </div>
+                </div>
+                
+                <!-- Category 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card p-4 rounded-4 text-center h-100">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h4>Water Conservation</h4>
+                        <p>Quizzes about oceans, rivers, and water preservation</p>
+                        <a href="#water-quizzes" class="btn btn-sm btn-outline-success mt-2">View Quizzes</a>
+                    </div>
+                </div>
+                
+                <!-- Category 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="category-card p-4 rounded-4 text-center h-100">
+                        <div class="category-icon mb-3">
+                            <i class="fas fa-sun"></i>
+                        </div>
+                        <h4>Climate Change</h4>
+                        <p>Test your understanding of global warming solutions</p>
+                        <a href="#climate-quizzes" class="btn btn-sm btn-outline-success mt-2">View Quizzes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Quizzes -->
+    <section class="featured-quizzes py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Quizzes</h2>
+            
+            <div class="row g-4">
+                <!-- Quiz 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="quiz-card p-4 rounded-4 h-100">
+                        <div class="quiz-badge mb-3">
+                            <span class="badge bg-success">Popular</span>
+                            <span class="badge bg-info">10 Questions</span>
+                        </div>
+                        <div class="quiz-image mb-3" style="background-image: url('../../images/quiz-forest.jpg');"></div>
+                        <h4>Rainforest Challenge</h4>
+                        <p class="quiz-desc">How much do you know about the world's most vital ecosystems?</p>
+                        <div class="quiz-meta d-flex justify-content-between align-items-center">
+                            <div class="quiz-difficulty">
+                                <span class="difficulty-label">Difficulty:</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="quiz-reward">
+                                <span class="badge bg-warning">+25 EcoPoints</span>
+                            </div>
+                        </div>
+                        <a href="rainforest-quiz.html" class="btn btn-success w-100 mt-3 rounded-pill">Start Quiz</a>
+                    </div>
+                </div>
+                
+                <!-- Quiz 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="quiz-card p-4 rounded-4 h-100">
+                        <div class="quiz-badge mb-3">
+                            <span class="badge bg-primary">New</span>
+                            <span class="badge bg-info">15 Questions</span>
+                        </div>
+                        <div class="quiz-image mb-3" style="background-image: url('../../images/quiz-plastic.jpg');"></div>
+                        <h4>Plastic Pollution IQ</h4>
+                        <p class="quiz-desc">Test your knowledge about plastic waste and solutions</p>
+                        <div class="quiz-meta d-flex justify-content-between align-items-center">
+                            <div class="quiz-difficulty">
+                                <span class="difficulty-label">Difficulty:</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="quiz-reward">
+                                <span class="badge bg-warning">+35 EcoPoints</span>
+                            </div>
+                        </div>
+                        <a href="plastic-quiz.html" class="btn btn-success w-100 mt-3 rounded-pill">Start Quiz</a>
+                    </div>
+                </div>
+                
+                <!-- Quiz 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="quiz-card p-4 rounded-4 h-100">
+                        <div class="quiz-badge mb-3">
+                            <span class="badge bg-danger">Timed</span>
+                            <span class="badge bg-info">12 Questions</span>
+                        </div>
+                        <div class="quiz-image mb-3" style="background-image: url('../../images/quiz-climate.jpg');"></div>
+                        <h4>Climate Change Countdown</h4>
+                        <p class="quiz-desc">Race against time to answer these climate questions</p>
+                        <div class="quiz-meta d-flex justify-content-between align-items-center">
+                            <div class="quiz-difficulty">
+                                <span class="difficulty-label">Difficulty:</span>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="quiz-reward">
+                                <span class="badge bg-warning">+50 EcoPoints</span>
+                            </div>
+                        </div>
+                        <a href="climate-quiz.html" class="btn btn-success w-100 mt-3 rounded-pill">Start Quiz</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forest Quizzes Section -->
+    <section id="forest-quizzes" class="category-quizzes py-5 bg-dark-green text-white">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3><i class="fas fa-tree me-2"></i> Forests & Wildlife</h3>
+                <a href="#" class="btn btn-outline-light btn-sm rounded-pill">View All</a>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Forest Quiz 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="quiz-card-sm p-3 rounded-4 h-100">
+                        <div class="quiz-image-sm mb-3" style="background-image: url('../../images/quiz-jungle.jpg');"></div>
+                        <h5>Amazon Jungle</h5>
+                        <p class="small">10 Questions | Medium</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning">+20 EcoPoints</span>
+                            <a href="amazon-quiz.html" class="btn btn-sm btn-success rounded-pill px-3">Start</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Forest Quiz 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="quiz-card-sm p-3 rounded-4 h-100">
+                        <div class="quiz-image-sm mb-3" style="background-image: url('../../images/quiz-endangered.jpg');"></div>
+                        <h5>Endangered Species</h5>
+                        <p class="small">8 Questions | Easy</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning">+15 EcoPoints</span>
+                            <a href="endangered-quiz.html" class="btn btn-sm btn-success rounded-pill px-3">Start</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Forest Quiz 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="quiz-card-sm p-3 rounded-4 h-100">
+                        <div class="quiz-image-sm mb-3" style="background-image: url('../../images/quiz-biodiversity.jpg');"></div>
+                        <h5>Biodiversity</h5>
+                        <p class="small">15 Questions | Hard</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning">+30 EcoPoints</span>
+                            <a href="biodiversity-quiz.html" class="btn btn-sm btn-success rounded-pill px-3">Start</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Forest Quiz 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="quiz-card-sm p-3 rounded-4 h-100">
+                        <div class="quiz-image-sm mb-3" style="background-image: url('../../images/quiz-deforestation.jpg');"></div>
+                        <h5>Deforestation</h5>
+                        <p class="small">12 Questions | Medium</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-warning">+25 EcoPoints</span>
+                            <a href="deforestation-quiz.html" class="btn btn-sm btn-success rounded-pill px-3">Start</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">How Eco Quizzes Work</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="step-card p-4 rounded-4 text-center h-100">
+                        <div class="step-number">1</div>
+                        <h4 class="my-3">Choose a Quiz</h4>
+                        <p>Select from our collection of environmental quizzes across different categories and difficulty levels.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="step-card p-4 rounded-4 text-center h-100">
+                        <div class="step-number">2</div>
+                        <h4 class="my-3">Test Your Knowledge</h4>
+                        <p>Answer multiple-choice questions and learn interesting facts about each topic.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="step-card p-4 rounded-4 text-center h-100">
+                        <div class="step-number">3</div>
+                        <h4 class="my-3">Earn Rewards</h4>
+                        <p>Get instant results, earn EcoPoints, and unlock achievements based on your score.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section py-5 bg-success text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-3">Ready to Challenge Yourself?</h2>
+                    <p class="lead mb-0">Take a quiz now and boost your environmental knowledge!</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="#quiz-categories" class="btn btn-light btn-lg rounded-pill px-4 me-2">Browse Quizzes</a>
+                    <a href="../../community/dashboard.html" class="btn btn-outline-light btn-lg rounded-pill px-4">My Progress</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white pt-5 pb-3">
+        <!-- Same footer as other pages -->
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP for animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="final1.js"></script>
+</body>
+</html>

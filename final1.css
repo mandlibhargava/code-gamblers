@@ -1,0 +1,139 @@
+/* Quizzes Hero Section */
+.quizzes-hero {
+    padding: 80px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5)), url('../../images/quizzes-bg.jpg') center/cover no-repeat;
+    color: white;
+}
+
+/* Category Cards */
+.category-card {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.category-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--light-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 20px;
+    color: var(--forest-green);
+}
+
+/* Quiz Cards */
+.quiz-card {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.quiz-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-image {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.quiz-badge .badge {
+    margin-right: 5px;
+}
+
+.quiz-desc {
+    color: #666;
+    min-height: 50px;
+}
+
+.quiz-meta {
+    font-size: 0.9rem;
+}
+
+.difficulty-label {
+    color: #666;
+    margin-right: 5px;
+}
+
+.stars {
+    color: var(--sun-yellow);
+    display: inline-block;
+}
+
+/* Small Quiz Cards */
+.quiz-card-sm {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.quiz-card-sm:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quiz-image-sm {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 6px;
+}
+
+/* Dark Green Section */
+.bg-dark-green {
+    background-color: var(--dark-green);
+}
+
+/* Step Cards */
+.step-card {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--forest-green);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .quizzes-hero {
+        text-align: center;
+        padding: 60px 0;
+    }
+    
+    .quizzes-hero .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .quiz-card, .quiz-card-sm {
+        margin-bottom: 20px;
+    }
+}

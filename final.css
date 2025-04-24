@@ -1,0 +1,200 @@
+:root {
+    --forest-green: #228B22;
+    --dark-green: #1a5e1a;
+    --light-green: #04480a;
+    --earth-brown: #8B4513;
+    --sky-blue: #87CEEB;
+    --sun-yellow: #FFD700;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #a14a4a;
+    background-color: colourgreen;
+}
+
+.forest-bg {
+    background-image: url('../images/bg-texture.png');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.navbar.bg-forest {
+    background-color: rgba(34, 139, 34, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.nav-link {
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.floating-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Feature Cards */
+.feature-card {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: var(--light-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 24px;
+    color: var(--forest-green);
+}
+
+/* Facts Section */
+.bg-light-green {
+    background-color: var(--light-green);
+}
+
+.fact-card {
+    background-color: white;
+    border: 2px solid var(--forest-green);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.fact-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--dark-green);
+}
+
+/* Quote Section */
+.quote-card {
+    background-color: var(--forest-green);
+    color: white;
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 3rem;
+    opacity: 0.2;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.quote-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.quote-author {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Stats Section */
+.bg-dark-green {
+    background-color: var(--dark-green);
+}
+
+.stat-item {
+    padding: 20px;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--sun-yellow);
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+/* CTA Section */
+.cta-card {
+    background: linear-gradient(135deg, var(--forest-green), var(--dark-green));
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #0d3b0d;
+}
+
+.footer a {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--sun-yellow) !important;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: var(--forest-green);
+    transform: translateY(-3px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .hero-section .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .stat-item {
+        margin-bottom: 20px;
+    }
+}

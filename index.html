@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSphere - Environmental Development</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP CDN for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <style>
+    /* Custom styles for nature-inspired design */
+    body {
+      background: linear-gradient(to bottom, #1a3c34, #4a7043);
+      font-family: 'Arial', sans-serif;
+      color: #f5f5f5;
+      overflow-x: hidden;
+    }
+    .nav-button {
+      background: radial-gradient(circle, #d4a373, #8b5e3c);
+      border-radius: 50%;
+      padding: 15px 25px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .nav-button:hover {
+      transform: scale(1.1);
+      background: radial-gradient(circle, #e6b800, #a67c00);
+    }
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      position: relative;
+    }
+    .leaf {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: url('https://img.icons8.com/color/48/000000/leaf.png') no-repeat center;
+      background-size: contain;
+      pointer-events: none;
+    }
+    .air-flow {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(to top, rgba(255, 255, 255, 0.2), transparent);
+      opacity: 0;
+    }
+    .quote-section {
+      background: #2e5e4e;
+      border-radius: 20px;
+      border: 2px solid #8b5e3c;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .root-transition {
+      border-bottom: 4px solid #8b5e3c;
+      border-image: linear-gradient(to right, transparent, #8b5e3c, transparent) 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero flex flex-col items-center justify-center text-center relative">
+    <nav class="absolute top-4 flex space-x-4">
+      <a href="#home" class="nav-button">Home</a>
+      <a href="#report" class="nav-button">Report</a>
+      <a href="#activities" class="nav-button">Activities</a>
+      <a href="#dashboard" class="nav-button">Dashboard</a>
+    </nav>
+    <h1 class="text-5xl md:text-7xl font-bold mb-4 animate-pulse">EcoSphere</h1>
+    <p class="text-xl md:text-2xl max-w-2xl mx-auto">
+      Join us to foster a green planet, reduce pollution, and save the next generation through innovative actions!
+    </p>
+    <div class="air-flow" id="air-flow"></div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="quote-section py-16 px-4 md:px-16 mx-4 md:mx-16 mt-8">
+    <h2 class="text-3xl font-semibold mb-4 text-center">Inspiration</h2>
+    <p class="text-lg italic max-w-3xl mx-auto">
+      "The greatest threat to our planet is the belief that someone else will save it." – Robert Swan
+    </p>
+  </section>
+
+  <!-- Development Plan and Monetization Strategies -->
+  <!-- Note: This is a comment for developers, not displayed on the website -->
+  <!--
+    Development Plan:
+    1. Frontend: Use HTML, CSS, and Tailwind CSS for responsive design. Add React for dynamic components like user dashboards and reporting forms (future integration).
+    2. Animations: GSAP for falling leaves (randomized positions and durations) and air-flow effects. Optimize for 60 FPS using requestAnimationFrame.
+    3. Backend (Future): Node.js/Express for user authentication, content moderation, and reward system. Use MongoDB for storing user data and reports.
+    4. Scalability: Host on Vercel or AWS with CDN for low-bandwidth optimization. Support 150+ concurrent users with lazy-loaded images and minified assets.
+    5. Features to Add:
+       - Reporting form with file upload (videos/photos) and moderation queue.
+       - Activity hub for virtual tree-planting, quizzes, and cleanup challenges.
+       - Dashboard with user impact scores, rewards (Sanskrit names, coins, certificates), and gamified profiles.
+       - Marketplace for eco-products using coins or donations.
+
+    Monetization Strategies:
+    1. Sponsored Challenges: Partner with eco-brands for paid activities (e.g., "Plant 100 Trees" campaign).
+    2. Subscription Tiers: Offer premium features like advanced analytics or priority reporting for $5-$10/month.
+    3. Ads: Display non-intrusive ads from eco-friendly brands, targeting 2% click-through rate.
+    4. Marketplace: Take 5-10% commission on eco-product sales or donations.
+    5. Affiliate Links: Earn 10-20% commission on eco-friendly product referrals.
+
+    Marketing Plan:
+    1. SEO: Optimize for keywords like "environmental action," "green planet," and "eco activities."
+    2. Social Media: Run campaigns on X and Instagram with hashtags like #EcoSphereChallenge.
+    3. Influencers: Collaborate with environmental influencers for shoutouts and live demos.
+  -->
+
+  <script>
+    // GSAP Animations
+    // Falling Leaves
+    function createLeaf() {
+      const leaf = document.createElement('div');
+      leaf.classList.add('leaf');
+      document.querySelector('.hero').appendChild(leaf);
+      gsap.fromTo(
+        leaf,
+        { y: -50, x: Math.random() * window.innerWidth, opacity: 1 },
+        {
+          y: window.innerHeight,
+          x: `+=${Math.random() * 200 - 100}`,
+          opacity: 0.5,
+          rotation: Math.random() * 360,
+          duration: 5 + Math.random() * 5,
+          ease: 'power1.in',
+          onComplete: () => leaf.remove()
+        }
+      );
+    }
+    setInterval(createLeaf, 1000);
+
+    // Air Flow Effect
+    gsap.to('#air-flow', {
+      opacity: 0.5,
+      y: -100,
+      duration: 3,
+      repeat: -1,
+      ease: 'power1.out'
+    });
+  </script>
+</body>
+</html>
